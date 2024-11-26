@@ -5,7 +5,7 @@ pubDate: '11/19/2024'
 # heroImage: '/blog-placeholder-1.jpg'
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+<!-- Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
 ## Headings
 
@@ -21,9 +21,9 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 ##### H5
 
-###### H6
+###### H6 -->
 
-## Paragraph -->
+## Introduction
 
   The Wizardry Engine is a physic engine made as a project for the first module at SAE Institute, it riquiers physics and demonstrations of said physics.
 
