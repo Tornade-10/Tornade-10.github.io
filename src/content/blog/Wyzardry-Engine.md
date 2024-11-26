@@ -25,11 +25,10 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 ## Paragraph -->
 
- Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
+  The Wizardry Engine is a physic engine made as a project for the first module at SAE Institute, it riquiers physics and demonstrations of said physics.
 
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
-## Images
+<!-- ## Images
 
 ### Syntax
 
@@ -39,25 +38,51 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ### Output
 
-![blog placeholder](/blog-placeholder-about.jpg)
-
-## Blockquotes
-
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+![blog placeholder](/blog-placeholder-about.jpg) -->
 
 ### Blockquote without attribution
 
 #### Syntax
 
 ```markdown
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
+> void GraphicManager::CreateCircle(core::Vec2<float> pos, float radius, SDL_Color color)
+{
+	// Get the size of the idx_vector as the starting idx
+	const std::size_t starting_idx = vertices_.size();
+
+	float angle_step = 2.0f * 3.14f / static_cast<float>(num_segments);
+
+	AddVertex(pos, color);
+
+	// Draw triangles for the radius of the circle
+	for (std::size_t i = 0; i < num_segments; i++)
+	{
+		float angle = i * angle_step;
+		float x = pos.x + radius * std::cos(angle);
+		float y = pos.y + radius * std::sin(angle);
+
+		AddVertex(core::Vec2<float>(x, y), color);
+	}
+
+	// Give an id to every segments
+	for (int i = 0; i < num_segments - 1; i++)
+	{
+		idx_vertices_.push_back(starting_idx);
+		idx_vertices_.push_back(starting_idx + i + 1);
+		idx_vertices_.push_back(starting_idx + i + 2);
+	}
+
+	// Put back the first segment as the last one after going through the whole vector
+	idx_vertices_.push_back(starting_idx);
+	idx_vertices_.push_back(starting_idx + num_segments);
+	idx_vertices_.push_back(starting_idx + 1);
+}
 ```
 
 #### Output
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
+> Here's, for start, the draw circle fonction.  
+> Only works on the graphyc side of things
 
 ### Blockquote with attribution
 
