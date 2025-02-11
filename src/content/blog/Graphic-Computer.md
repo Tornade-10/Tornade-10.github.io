@@ -1,5 +1,5 @@
 ---
-title: 'Wyzardry-Engine'
+title: '3D Scene'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: '11/19/2024'
 # heroImage: '/blog-placeholder-1.jpg'
@@ -25,7 +25,7 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 ## Introduction
 
-  The Wizardry Engine is a physic engine made as a project for the first module at SAE Institute, it riquiers physics and demonstrations of said physics.
+  Here is a 3D scene with some of the things that goes in the background
 
 
 <!-- ## Images
@@ -40,7 +40,7 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 ![blog placeholder](/blog-placeholder-about.jpg) -->
 
-### Blockquote without attribution
+<!-- ### Blockquote without attribution -->
 
 #### Syntax
 
@@ -158,4 +158,4 @@ Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures. -->
 
-here is a link to the github of the project [Wizardry-engine.git](https://github.com/Tornade-10/Wizardry-engine.git)
+here is a link to the github of the project [3D Scene.git](https://github.com/SAE-Geneve/samples-Tornade-10)
