@@ -1,16 +1,161 @@
 ---
-title: 'Second post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 15 2022'
-heroImage: '/blog-placeholder-4.jpg'
+title: 'Wyzardry-Engine'
+description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
+pubDate: '11/19/2024'
+# heroImage: '/blog-placeholder-1.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+<!-- Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+## Headings
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+# H1
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6 -->
+
+## Introduction
+
+  The Wizardry Engine is a physic engine made as a project for the first module at SAE Institute, it riquiers physics and demonstrations of said physics.
+
+
+<!-- ## Images
+
+### Syntax
+
+```markdown
+![Alt text](./full/or/relative/path/of/image)
+```
+
+### Output
+
+![blog placeholder](/blog-placeholder-about.jpg) -->
+
+### Blockquote without attribution
+
+#### Syntax
+
+```markdown
+void GraphicManager::CreateCircle(core::Vec2<float> pos, float radius, SDL_Color color)
+{
+	// Get the size of the idx_vector as the starting idx
+	const std::size_t starting_idx = vertices_.size();
+
+	float angle_step = 2.0f * 3.14f / static_cast<float>(num_segments);
+
+	AddVertex(pos, color);
+
+	// Draw triangles for the radius of the circle
+	for (std::size_t i = 0; i < num_segments; i++)
+	{
+		float angle = i * angle_step;
+		float x = pos.x + radius * std::cos(angle);
+		float y = pos.y + radius * std::sin(angle);
+
+		AddVertex(core::Vec2<float>(x, y), color);
+	}
+
+	// Give an id to every segments
+	for (int i = 0; i < num_segments - 1; i++)
+	{
+		idx_vertices_.push_back(starting_idx);
+		idx_vertices_.push_back(starting_idx + i + 1);
+		idx_vertices_.push_back(starting_idx + i + 2);
+	}
+
+	// Put back the first segment as the last one after going through the whole vector
+	idx_vertices_.push_back(starting_idx);
+	idx_vertices_.push_back(starting_idx + num_segments);
+	idx_vertices_.push_back(starting_idx + 1);
+}
+```
+
+#### Quick description
+
+> Here's, for start, the draw circle fonction.  
+> Only works on the graphyc side of things
+
+### Blockquote with attribution
+
+#### Syntax
+
+```markdown
+void physic::Body::TotalVelocity()
+{
+	velocity_ = velocity_ + acceleration;
+}
+
+void physic::Body::ApplyForce(core::Vec2<float> force)
+{
+	acceleration = force / mass_;
+}
+
+void physic::Body::UpdatePosition()
+{
+	TotalVelocity();
+
+	// TODO : Add delta time
+	position_.x += velocity_.x;
+	position_.y += velocity_.y;
+}
+```
+
+#### Quick description
+
+> And here is the code colisions-wise for circle
+
+### Todo List to implemente
+
+```markdown
+1. shapes
+2. Physics
+3. Collisions
+```
+
+### Test to implemente too
+
+```markdown
+- Solar system
+- Ontrigger
+- Collisions
+- Quad tree
+```
+
+<!-- ## Other Elements — abbr, sub, sup, kbd, mark
+
+### Syntax
+
+```markdown
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+
+H<sub>2</sub>O
+
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+
+Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+``` -->
+
+<!-- ### Output
+
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+
+H<sub>2</sub>O
+
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+
+Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures. -->
+
+here is a link to the github of the project [Wizardry-engine.git](https://github.com/Tornade-10/Wizardry-engine.git)
